@@ -1,0 +1,11 @@
+#we need to have a netconf over ssh enabled on juniper network devices
+#note: for SRX devices we need to allow netconf, SSH on management functional zone 
+
+  #use to from the python libray outputs as an input to intrepetters
+from pprint import ppprint
+ #The Device class enables you to connect to a device running Junos OS using a serial console connection, using netconf over SSH 
+from jnpr.junos import Device
+dev = Device (host='',
+              username='',
+              password='')
+ #we created a variable dev and assigned it to class DEV
