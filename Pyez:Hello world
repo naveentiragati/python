@@ -9,3 +9,8 @@ dev = Device (host='',
               username='',
               password='')
  #we created a variable dev and assigned it to class DEV
+ dev.open()
+ pprint(dev.facts) #an expicit mention to print facts of device 
+ #dev.open() line opened the connection and gathered some basic facts
+ dev.colse()
+ 
