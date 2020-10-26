@@ -1,0 +1,10 @@
+from jnpr.junos import Device
+from jnpr.junos.utils.config import Config 
+#config utility enables you to cofigure devices running JUNOS
+dev = Device(host=’’, user=’’, password=’’, gather_facts=False)
+dev.open()
+cu = Config(dev) # assigned a varible to a untiliti called Config
+diff = cu.diff() #show | compare
+if diff:
+ cu.rollback()
+dev.close()
