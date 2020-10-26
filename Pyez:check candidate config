@@ -8,3 +8,15 @@ diff = cu.diff() #show | compare
 if diff:
  cu.rollback()
 dev.close()
+
+
+"""expected output:
+
+R1# show |display set |find apply
+set protocols bgp group internal_peers type internal     >>>>no commit was given
+
+After running the script
+
+R1# show |display set |find apply
+>>>>
+
